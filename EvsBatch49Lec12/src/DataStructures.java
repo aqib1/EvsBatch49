@@ -31,7 +31,7 @@ public class DataStructures {
 		vector.add(11); // 10
 //		vector.clear();
 		System.out.println(vector.indexOf(10));
-		vector.trimToSize();
+		vector.trimToSize(); // 21 internal capacity 21 
 		System.out.println(vector.remove(Integer.valueOf(12)));
 		System.out.println(vector);
 		
