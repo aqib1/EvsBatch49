@@ -29,10 +29,11 @@ public class DataStructures {
 		vector.add(4); // 3
 		
 		// Fail-safe
-//		Enumeration<Integer> enumeration = vector.elements();
-//		while(enumeration.hasMoreElements()) {
-//			System.out.println(enumeration.nextElement());
-//		}
+		Enumeration<Integer> enumeration = vector.elements();
+		while(enumeration.hasMoreElements()) {
+			System.out.println(enumeration.nextElement());
+//			vector.add(12);
+		}
 		
 //		BitSet bitSet = new BitSet();
 //		bitSet.set(0);
