@@ -1,4 +1,7 @@
 import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -27,18 +30,45 @@ public class MainClass {
 		// 2 types -> byte buffer -> byte 8 bits
 		//         -> character buffer -> fastest // character 
 		
+		// buffer character read
+//		char[] data = new char[(int)file.length()];
+//		
+//		try(BufferedReader read = new BufferedReader(new FileReader(file))){
+//			read.read(data);
+//			System.out.println(String.valueOf(data));
+//		}  catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		String data = "Hi there everyone!!! \n";
+//		try(BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
+//		   writer.write(data.toCharArray());
+//		   writer.flush();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+		
+		
+		
 		//Byte buffer read
-		byte []data = new byte[(int)file.length()];
-		try(BufferedInputStream bufferedInputStream = 
-				new BufferedInputStream(new FileInputStream(file))){
-			bufferedInputStream.read(data);
-			for(byte d:data)
-				System.out.print((char)d);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//		byte []data = new byte[(int)file.length()];
+//		try(BufferedInputStream bufferedInputStream = 
+//				new BufferedInputStream(new FileInputStream(file))){
+//			bufferedInputStream.read(data);
+//			for(byte d:data)
+//				System.out.print((char)d);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 		
-		
+		// Byte buffer write
+//		String data = "Hi there everyone !!!\n";
+//		try(BufferedOutputStream outputStream =
+//				new BufferedOutputStream(new FileOutputStream(file, true))) {
+//			outputStream.write(data.getBytes());
+//			outputStream.flush();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 		
 		
 		
