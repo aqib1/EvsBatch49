@@ -1,7 +1,6 @@
 package designandprinciples;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class MainClass {
 
@@ -24,10 +23,33 @@ public class MainClass {
 	 * 
 	 */
 	public static void main(String[] args) {
+		
+		Thread thread1 = new Thread(new Runnable() {
+			public void run() {
+				
+				System.out.println("Sepreate thread -> "+ Thread.currentThread().getName());
+			}
+		}); thread1.start();
+		
+		Thread thread = new Thread(new Runnable() {
+			public void run() {
+//				try {
+//					Thread.sleep(1000);
+//				} catch (InterruptedException e) {
+//					e.printStackTrace();
+//				}
+				System.out.println("Sepreate thread -> "+ Thread.currentThread().getName());
+			}
+		}); thread.start();
+		
+		
+		System.out.println("Hi i am main method thread -> "+ Thread.currentThread().getName());
+		
+		
 
-		int res = MathOpr.getInstance().add(10)
-				.sub(1).mul(2).div(9).getResult();
-		System.out.println(res);
+//		int res = MathOpr.getInstance().add(10)
+//				.sub(1).mul(2).div(9).getResult();
+//		System.out.println(res);
 
 //		List<Devloper> li = Arrays.asList(new BackEndDev(), new FrontEndDev());
 //		Manager m = new Manager(li);
