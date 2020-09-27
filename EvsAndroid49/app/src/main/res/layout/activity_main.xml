@@ -13,6 +13,14 @@
         android:layout_height="wrap_content"
         android:text="@string/textview_name_helloworld"
         />
+
+    <EditText
+        android:id="@+id/edittext_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="enter your name"
+        />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

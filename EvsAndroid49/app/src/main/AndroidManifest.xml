@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.evs.evsandroid.evsandroid49">
-
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-feature android:name="android.hardware.Camera"></uses-feature>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,13 +11,35 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+        <intent-filter>
+            <action android:name="com.evs.evsandroid.evsandroid49.MAINACTIVITY"></action>
+            <category android:name="android.intent.category.DEFAULT"></category>
+        </intent-filter>
+        </activity>
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity android:name=".TorchActivity">
+            <intent-filter>
+                <action android:name="com.evs.evsandroid.evsandroid49.TORCHACTIVITY"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+
         </activity>
 
+        <activity android:name=".MusicPlayerActivity">
+            <intent-filter>
+                <action android:name="com.evs.evsandroid.evsandroid49.MUSICPLAYERACTIVITY"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+
+        </activity>
+    <service android:name=".services.MusicService"></service>
     </application>
 
 </manifest>

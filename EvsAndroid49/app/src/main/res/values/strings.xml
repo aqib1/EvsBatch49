@@ -2,4 +2,7 @@
     <string name="app_name">EvsAndroid49</string>
     <string name="textview_name_helloworld">Hello World</string>
     <string name="button_ok">OK</string>
+    <string name="textview_splash_label">Splash Sample</string>
+    <string name="tb_offText">OFF</string>
+    <string name="tb_onText">ON</string>
 </resources>
