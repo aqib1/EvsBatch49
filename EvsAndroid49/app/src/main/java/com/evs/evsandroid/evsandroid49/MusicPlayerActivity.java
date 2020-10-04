@@ -1,7 +1,9 @@
 package com.evs.evsandroid.evsandroid49;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -16,6 +18,7 @@ import com.evs.evsandroid.evsandroid49.services.MusicService;
 public class MusicPlayerActivity extends Activity {
 
     private ToggleButton tb;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,7 @@ public class MusicPlayerActivity extends Activity {
         initComponents();
         settingUpListener();
     }
+
 
     private void settingUpListener() {
         final Intent musicIntent = new Intent(MusicPlayerActivity.this, MusicService.class);

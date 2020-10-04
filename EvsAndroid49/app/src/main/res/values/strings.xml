@@ -5,4 +5,7 @@
     <string name="textview_splash_label">Splash Sample</string>
     <string name="tb_offText">OFF</string>
     <string name="tb_onText">ON</string>
+    <string name="et_hint_username">enter username</string>
+    <string name="et_hint_password">enter password</string>
+    <string name="btn_submit">submit</string>
 </resources>
