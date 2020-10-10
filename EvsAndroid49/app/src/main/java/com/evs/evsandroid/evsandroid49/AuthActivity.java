@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.SlidingDrawer;
 
 import com.evs.evsandroid.evsandroid49.model.AuthModel;
 
@@ -16,6 +18,8 @@ import com.evs.evsandroid.evsandroid49.model.AuthModel;
 
 public class AuthActivity extends Activity {
 
+    private LinearLayout signinForm, registerationForm;
+    private SlidingDrawer registerationDrawer;
     private EditText userName, password;
     private Button submit;
 
@@ -24,13 +28,30 @@ public class AuthActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
         initComponents();
+        settingUpListeners();
 
     }
 
+    private void settingUpListeners() {
+        registerationDrawer.setOnDrawerOpenListener(()->{
+            setFormsClickAble(false, true);
+        });
+        registerationDrawer.setOnDrawerCloseListener(() -> {
+            setFormsClickAble(true, false);
+        });
+
+    }
+    private void setFormsClickAble(boolean signinFormClickable, boolean registerationFormClickable){
+        signinForm.setClickable(signinFormClickable);
+        registerationForm.setClickable(registerationFormClickable);
+    }
     private void initComponents() {
         userName = findViewById(R.id.editText_username);
         password = findViewById(R.id.editText_password);
         submit = findViewById(R.id.submit);
+        signinForm = findViewById(R.id.auth_signinactivity_form);
+        registerationForm = findViewById(R.id.auth_registerform);
+        registerationDrawer = findViewById(R.id.auth_signupdrawer);
         SPManager.getInstance().init(this).setDefaultMessage("Please enter proper key");
     }
 

@@ -47,6 +47,13 @@
             </intent-filter>
 
         </activity>
+        <activity android:name=".SettingsActivity">
+            <intent-filter>
+                <action android:name="com.evs.evsandroid.evsandroid49.SETTINGSACTIVITY"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+
+        </activity>
     <service android:name=".services.MusicService"></service>
     </application>
 
