@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.evs.evsandroid.evsandroid49">
+    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
     <uses-permission android:name="android.permission.CAMERA"></uses-permission>
     <uses-feature android:name="android.hardware.Camera"></uses-feature>
     <application
@@ -50,6 +51,20 @@
         <activity android:name=".SettingsActivity">
             <intent-filter>
                 <action android:name="com.evs.evsandroid.evsandroid49.SETTINGSACTIVITY"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".SettingsActivity2">
+            <intent-filter>
+                <action android:name="com.evs.evsandroid.evsandroid49.SETTINGSACTIVITY2"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+        <activity android:name=".MessageActivity">
+            <intent-filter>
+                <action android:name="com.evs.evsandroid.evsandroid49.MESSAGEACTIVITY"></action>
                 <category android:name="android.intent.category.DEFAULT"></category>
             </intent-filter>
 

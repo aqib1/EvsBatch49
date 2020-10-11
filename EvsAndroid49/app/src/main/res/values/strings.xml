@@ -15,4 +15,6 @@
     <string name="hint_edittext_userid">userid / email</string>
     <string name="r_hint_edittext_userid">enter [userid / email]</string>
     <string name="regitertext_textview_text">Register</string>
+    <string name="send_message_hint">enter message</string>
+    <string name="enter_phone_no_hint">enter phone number</string>
 </resources>
