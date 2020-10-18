@@ -69,6 +69,19 @@
             </intent-filter>
 
         </activity>
+
+        <activity android:name=".AuthActivity2">
+            <intent-filter>
+                <action android:name="com.evs.evsandroid.evsandroid49.AUTHACTIVITY2"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+        <activity android:name=".GameActivity">
+            <intent-filter>
+                <action android:name="com.evs.evsandroid.evsandroid49.GAMEACTIVITY"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
     <service android:name=".services.MusicService"></service>
     </application>
 
