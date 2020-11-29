@@ -12,6 +12,10 @@ import com.example.evsandroid49_sqlite.dbreader.AppDatabase;
 import com.example.evsandroid49_sqlite.dbreader.DBManager;
 import com.example.evsandroid49_sqlite.entities.User;
 import com.example.evsandroid49_sqlite.models.UserModel;
+import com.example.evsandroid49_sqlite.rest.RestViaPost;
+import com.example.evsandroid49_sqlite.rest.ResterationAPI;
+
+import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends Activity {
 
@@ -49,6 +53,23 @@ public class MainActivity extends Activity {
             user.setNumber(thisActivity.phoneNumber.getText().toString());
             appDatabase.userDao().insert(user);
             Toast.makeText(thisActivity, "User Registered successfully", Toast.LENGTH_LONG).show();
+
+            ResterationAPI api = new ResterationAPI();
+            api.execute("aqib", "aqib123");
+
+
+            try {
+                String response = (String)api.get();
+                if(response.equals("R")){
+
+                } else {
+                    // exit
+                }
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
         } else {
             Toast.makeText(thisActivity, "Confirm password is not same as password", Toast.LENGTH_SHORT).show();
